@@ -1,0 +1,14 @@
+extends ../layout 
+
+block content 
+  h1= title
+
+  include errors
+
+  form(action='/books/new' method='POST')
+    include form
+
+    div.book-form
+      input(type='submit' value='Create New Book')
+    div.books-form
+      a.button(href='/books') Cancel
